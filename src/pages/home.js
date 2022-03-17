@@ -1,4 +1,4 @@
-import { Container, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { Layout } from "../components/layout";
 
 export function Home() {
