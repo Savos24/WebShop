@@ -20,15 +20,33 @@ import {
 } from "react-icons/fa";
 import { GiSailboat } from "react-icons/gi";
 
+const dropDownMenu = [
+  {
+    icon: <FaCrosshairs />,
+    name: "Action",
+    link: "/movies/action",
+  },
+  { icon: <GiSailboat />, name: "Advanture", link: "/movies/advanture" },
+  { icon: <FaLaughSquint />, name: "Comedy", link: "/movies/comedy" },
+  { icon: <FaMagic />, name: "Fantasy", link: "/movies/fantasy" },
+  { icon: <FaSadTear />, name: "Horror", link: "/movies/horror" },
+  { icon: <FaHeart />, name: "Romance", link: "/movies/romance" },
+];
+
 export function Header() {
   return (
     <Container minW="100%" bgColor="black" px="7rem">
       <Flex minW="100%" minH="8vh" justify="space-between" align="center">
         <Link as={ReactLink} to="/">
-          <Image
-            src="https://i.pinimg.com/originals/cc/b2/d1/ccb2d1a475ecd2a070f8aa8bcfc3563b.jpg"
-            maxH="8vh"
-          ></Image>
+          <Flex align="center">
+            <Image
+              src="https://i.pinimg.com/originals/cc/b2/d1/ccb2d1a475ecd2a070f8aa8bcfc3563b.jpg"
+              maxH="8vh"
+            ></Image>
+            <Text fontSize="24px" fontWeight="bold">
+              MovieZilla
+            </Text>
+          </Flex>
         </Link>
         <HStack spacing="3rem" textAlign="center">
           <Link as={ReactLink} to="/">
@@ -38,15 +56,14 @@ export function Header() {
             {({ isOpen }) => (
               <>
                 <MenuButton isActive={isOpen} as={Link} fontSize="18px">
-                  {isOpen ? "Genres" : "Genres"}
+                  Genres
                 </MenuButton>
                 <MenuList>
-                  <MenuItem icon={<FaCrosshairs />}>Action</MenuItem>
-                  <MenuItem icon={<GiSailboat />}>Advanture</MenuItem>
-                  <MenuItem icon={<FaLaughSquint />}>Comedy</MenuItem>
-                  <MenuItem icon={<FaMagic />}>Fantasy</MenuItem>
-                  <MenuItem icon={<FaSadTear />}>Horror</MenuItem>
-                  <MenuItem icon={<FaHeart />}>Romance</MenuItem>
+                  {dropDownMenu.map((item) => (
+                    <MenuItem as={ReactLink} to={item.link} icon={item.icon}>
+                      {item.name}
+                    </MenuItem>
+                  ))}
                 </MenuList>
               </>
             )}
