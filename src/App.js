@@ -5,6 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Home } from "./pages/home";
 import { myTheme } from "./theme/theme";
 import { ContactUs } from "./pages/contactUs";
+import { Movies } from "./pages/movies";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/movies/:genre" element={<Movies />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

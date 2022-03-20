@@ -1,5 +1,5 @@
 import { Layout } from "../components/layout";
 
-export function MovieGenres() {
+export function Movies() {
   return <Layout></Layout>;
 }
