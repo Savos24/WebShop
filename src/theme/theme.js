@@ -7,7 +7,7 @@ import { LinkStyles as Link } from "./components/Links";
 export const myTheme = extendTheme({
   colors: {
     primary: "#000000",
-    secondary: "#b9b9b9",
+    secondary: "#82a0aa",
     gradiant: "#82a0aa",
   },
   // Other foundational style overrides go here
