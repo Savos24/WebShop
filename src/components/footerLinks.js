@@ -13,8 +13,8 @@ export function FooterLinks() {
   return (
     <Flex gap="7rem">
       {footerLinks.map((item) => (
-        <VStack spacing="1.5rem">
-          <Text color="white" fontWeight="semibold" pb="2rem">
+        <VStack spacing="1rem">
+          <Text color="white" fontWeight="semibold" pb="1.5rem">
             {item.name}
           </Text>
           {item.links}

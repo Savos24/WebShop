@@ -6,7 +6,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <Box minH="calc(100vh - 38vh)" bgColor="secondary">
+      <Box minH="calc(100vh - 40vh)" bgColor="secondary">
         {children}
       </Box>
       <Footer />

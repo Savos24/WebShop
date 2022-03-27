@@ -36,7 +36,7 @@ const dropDownMenu = [
 
 export function Header() {
   return (
-    <Container minW="100%" bgColor="primary" px="7rem">
+    <Container minW="100%" bgColor="primary" px="10vw">
       <Flex minW="100%" minH="8vh" justify="space-between" align="center">
         <Box w="5vw">
           <HeroImage />
