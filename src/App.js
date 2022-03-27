@@ -6,6 +6,8 @@ import { Home } from "./pages/home";
 import { myTheme } from "./theme/theme";
 import { ContactUs } from "./pages/contactUs";
 import { Movies } from "./pages/movies";
+import { TermsOfUse } from "./pages/termsOfUse";
+import { PrivacyPolicy } from "./pages/privacyPolicy";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/movies/:genre" element={<Movies />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

@@ -1,8 +1,8 @@
 import {
+  Box,
   Container,
   Flex,
   HStack,
-  Image,
   Link,
   Menu,
   MenuButton,
@@ -19,6 +19,7 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { GiSailboat } from "react-icons/gi";
+import { HeroImage } from "./heroImage";
 
 const dropDownMenu = [
   {
@@ -35,19 +36,11 @@ const dropDownMenu = [
 
 export function Header() {
   return (
-    <Container minW="100%" bgColor="black" px="7rem">
+    <Container minW="100%" bgColor="primary" px="7rem">
       <Flex minW="100%" minH="8vh" justify="space-between" align="center">
-        <Link as={ReactLink} to="/">
-          <Flex align="center">
-            <Image
-              src="https://i.pinimg.com/originals/cc/b2/d1/ccb2d1a475ecd2a070f8aa8bcfc3563b.jpg"
-              maxH="8vh"
-            ></Image>
-            <Text fontSize="24px" fontWeight="bold">
-              MovieZilla
-            </Text>
-          </Flex>
-        </Link>
+        <Box w="5vw">
+          <HeroImage />
+        </Box>
         <HStack spacing="3rem" textAlign="center">
           <Link as={ReactLink} to="/">
             <Text fontSize="18px">Home</Text>
