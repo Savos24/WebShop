@@ -11,7 +11,7 @@ const footerLinks = [
 
 export function FooterLinks() {
   return (
-    <Flex gap="7rem" pr="10vw">
+    <Flex gap="7rem">
       {footerLinks.map((item) => (
         <VStack spacing="1.5rem">
           <Text color="white" fontWeight="semibold" pb="2rem">

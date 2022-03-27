@@ -6,7 +6,7 @@ import { LinkStyles as Link } from "./components/Links";
 
 export const myTheme = extendTheme({
   colors: {
-    primary: "#000000",
+    primary: "#0d0d0d",
     secondary: "#82a0aa",
     gradiant: "#82a0aa",
   },
